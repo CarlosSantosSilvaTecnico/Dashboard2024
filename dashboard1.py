@@ -1,12 +1,12 @@
 import dash
+import dash_core_components as dcc
+#import dash_html_components as html
 from dash import html
-from dash import dcc
 
-#Define CSS style
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['mystyle.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server=app.server
+server = app.server
 
 app.layout = html.Div([
     html.H1('IST Energy Monitor - Dashboard 1'),
@@ -32,4 +32,4 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server()
